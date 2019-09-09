@@ -1,0 +1,82 @@
+
+<div class="mdc-card mdc-card--outlined ">
+  <div class="mdc-card__media mdc-card__media--16-9 ">
+
+      <label class="label" for="upload-photo">
+        <material-fab >
+          <material-icon icon="add"></material-icon>
+        </material-fab>
+      </label>
+      <input id="upload-photo" type="file"
+               accept="image/*">
+    <!-- Label paired with an input triggers it -->
+</div>
+  <div class="card__primary">
+    <h2 class="card__title">Name</h2>
+    <h3 class="card__subtitle">URL</h3>
+  </div>
+  <div class="maincard">
+  <div class="card_ingridients">
+      <material-input label="Add ingridient"
+                      autoFocus floatingLabel style="width:80%"
+                      [(ngModel)]="newItem"
+                      (keyup.enter)="additem()">
+      </material-input>
+
+      <div *ngIf="items.isNotEmpty">
+        <ul>
+            <li *ngFor="let item of items; let i=index">
+              <material-checkbox #done materialTooltip="Mark item as done">
+              </material-checkbox>
+              <span [class.done]="done.checked">{{item}}</span>
+              <material-fab mini (trigger)="remove(i)">
+                <material-icon icon="delete"></material-icon>
+              </material-fab>
+            </li>
+          </ul>
+        </div>
+  </div>
+  <div class="card_steps">
+
+        <material-input label="Add step"
+                        autoFocus floatingLabel style="width:80%"
+                        [(ngModel)]="newStep"
+                        (keyup.enter)="addstep()">
+        </material-input>
+
+      <div *ngIf="steps.isNotEmpty">
+        <ul>
+            <li *ngFor="let step of steps; let i=index">
+              <material-checkbox #done materialTooltip="Mark step as done">
+              </material-checkbox>
+              <span [class.done]="done.checked">{{step}}</span>
+              <material-fab mini (trigger)="removestep(i)">
+                <material-icon icon="delete"></material-icon>
+              </material-fab>
+            </li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+  <div class="mdc-card__actions">
+    <div class="mdc-card__action-buttons">
+      <material-button>Read</material-button>
+      <material-button>Bookmark</material-button>
+    </div>
+    <div class="mdc-card__action-icons">
+      <material-button icon>
+        <material-icon icon="favorite_border"></material-icon>
+      </material-button>
+      <material-button icon>
+        <material-icon icon="share"></material-icon>
+      </material-button>
+      <material-button icon>
+        <material-icon icon="more_vert"></material-icon>
+      </material-button>
+    </div>
+  </div>
+</div>
+
+<button class="mdc-button mdc-button--raised"
+  data-mdc-auto-init="MDCRipple">Auto Init!</button>

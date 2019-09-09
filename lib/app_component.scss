@@ -1,0 +1,52 @@
+@import 'package:angular_components/css/material/material';
+@import 'package:angular_components/app_layout/mixins';
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Material+Icons);
+
+$mdc-theme-primary: #fcb8ab;
+$mdc-theme-secondary: rgb(66, 189, 189);
+$mdc-theme-on-primary: #442b2d;
+$mdc-theme-on-secondary: #212121;
+
+@import "package:mdc_web/material-components-web";
+
+
+.mdc-button {
+  @include mdc-shape-radius(25px);
+  width: 100%;
+}
+:host {
+}
+.drawer {
+ padding: 45px;
+}
+material-button {
+
+}
+material-list-item {
+  padding: 10px;
+}
+material-list-item:hover {
+  padding: 10px;
+  color: blue;
+  text-decoration: none;
+}
+.nav {
+  border-radius: 25px;
+  width: 100%;
+}
+header {
+  border-radius: 25px;
+  background-color: #333;
+
+}
+button {
+  border-radius: 25px;
+}
+
+h1 {
+  border-radius: 25px;
+  margin: auto;
+  text-align: top left;
+  outline-width: medium;
+}

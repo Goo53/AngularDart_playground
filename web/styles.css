@@ -1,0 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Material+Icons);
+
+body {
+  background: linear-gradient(to bottom right, #33ccff 0%, #ff99cc 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 5vw;
+}
+
+* {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}

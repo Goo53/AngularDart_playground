@@ -1,0 +1,51 @@
+
+<material-drawer class="drawer" temporary overlay #drawer="drawer">
+  <div *deferredContent>
+      <material-list-item>
+        <material-button class="nav" raised icon [routerLink]="RoutePaths.login.toUrl()"
+           [routerLinkActive]="'active-route'" (trigger)="drawer.toggle()">Login</material-button>
+      </material-list-item>
+      <!--  'icon' makes material-button kinda roundish
+            (trigger)='drawer.toggle()' closes drawer
+      --><material-list-item><button class="mdc-button mdc-button--raised"
+        data-mdc-auto-init="MDCRipple" [routerLink]="RoutePaths.login.toUrl()"
+           [routerLinkActive]="'active-route'" (trigger)="drawer.toggle()">Login</button></material-list-item>
+      <material-list-item>
+        <material-button class="nav" raised dense [routerLink]="RoutePaths.home.toUrl()"
+           [routerLinkActive]="'active-route'" (trigger)="drawer.toggle()">Home</material-button>
+      </material-list-item>
+      <material-list-item>
+        <material-button class="nav" raised [routerLink]="RoutePaths.home_screen.toUrl()"
+           [routerLinkActive]="'active-route'" (trigger)="drawer.toggle()">Home Screen</material-button>
+      </material-list-item>
+      <material-list-item>
+        <material-button class="nav" raised [routerLink]="RoutePaths.recipes.toUrl()"
+           [routerLinkActive]="'active-route'" (trigger)="drawer.toggle()">Recipes Center</material-button>
+      </material-list-item>
+      <material-list-item>
+        <material-button class="nav" raised [routerLink]="RoutePaths.add_recipe.toUrl()"
+           [routerLinkActive]="'active-route'" (trigger)="drawer.toggle()">Add Recipe</material-button>
+      </material-list-item>
+      <material-fab raised class="blue">
+  <material-icon icon="reply"></material-icon>
+</material-fab>
+  </div>
+</material-drawer>
+<material-content>
+  <header class="material-header shadow">
+    <div class="material-header-row">
+      <!-- This button will toggle (open/close) the drawer -->
+      <material-button icon
+          class="material-drawer-button" (trigger)="drawer.toggle()">
+        <material-icon icon="menu"></material-icon>
+      </material-button>
+      <span class="material-header-title">MyCookbook 1.0</span>
+      <div class="material-spacer"></div>
+      <!-- Other header info goes here -->
+    </div>
+  </header>
+  <div>
+  </div>
+</material-content>
+
+<router-outlet [routes]="Routes.all"></router-outlet>
