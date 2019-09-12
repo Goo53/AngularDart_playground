@@ -9,7 +9,9 @@ $mdc-theme-on-secondary: #212121;
 
 @import "package:mdc_web/material-components-web";
 
-material-input {  word-break: break-all;
+material-input {
+   word-break: break-all;
+   width: block;
 }
 .label {
 }

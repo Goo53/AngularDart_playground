@@ -3,7 +3,8 @@ import 'dart:async';
 import 'package:angular/angular.dart';
 import 'package:angular_components/angular_components.dart';
 
-import 'recipe_service.dart';
+import 'package:my_cookbook/src/add_recipe/recipe_service.dart';
+import 'package:my_cookbook/src/recipe.dart';
 
 @Component(
   selector: 'add_recipe',
@@ -17,22 +18,23 @@ import 'recipe_service.dart';
     NgFor,
     NgIf,
   ],
-  providers: [ClassProvider(StepsService)],
+  providers: [ClassProvider(AddRecipeService)],
 )
-class StepsComponent implements OnInit {
-  final StepsService stepsService;
+class AddRecipeComponent implements OnInit {
+  final AddRecipeService recipeService;
 
   List<String> items = [];
   List<String> steps = [];
   String newItem = '';
   String newStep = '';
+  String name;
 
-  StepsComponent(this.stepsService);
+  AddRecipeComponent(this.recipeService);
 
   @override
   Future<Null> ngOnInit() async {
-    steps = await stepsService.getStep();
-    items = await stepsService.getIngridiend();
+    steps = await recipeService.getStep();
+    items = await recipeService.getIngridiend();
   }
 
     void additem() {

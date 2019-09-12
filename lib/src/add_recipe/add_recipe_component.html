@@ -1,6 +1,6 @@
 
-<div class="mdc-card mdc-card--outlined ">
-  <div class="mdc-card__media mdc-card__media--16-9 ">
+<div class="mdc-card">
+  <div class="mdc-card__media">
 
       <label class="label" for="upload-photo">
         <material-fab >
@@ -17,7 +17,7 @@
   </div>
   <div class="maincard">
   <div class="card_ingridients">
-      <material-input label="Add ingridient"
+      <material-input multiline label="Add ingridient"
                       autoFocus floatingLabel style="width:80%"
                       [(ngModel)]="newItem"
                       (keyup.enter)="additem()">
@@ -38,7 +38,7 @@
   </div>
   <div class="card_steps">
 
-        <material-input label="Add step"
+        <material-input multiline label="Add step"
                         autoFocus floatingLabel style="width:80%"
                         [(ngModel)]="newStep"
                         (keyup.enter)="addstep()">
@@ -61,19 +61,12 @@
 
   <div class="mdc-card__actions">
     <div class="mdc-card__action-buttons">
-      <material-button>Read</material-button>
-      <material-button>Bookmark</material-button>
+      <material-button>Add Tags</material-button>
     </div>
     <div class="mdc-card__action-icons">
-      <material-button icon>
-        <material-icon icon="favorite_border"></material-icon>
-      </material-button>
-      <material-button icon>
-        <material-icon icon="share"></material-icon>
-      </material-button>
-      <material-button icon>
-        <material-icon icon="more_vert"></material-icon>
-      </material-button>
+      <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="Share">share</button>
+      <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="More options">more_vert</button>
+
     </div>
   </div>
 </div>

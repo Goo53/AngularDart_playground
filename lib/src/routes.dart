@@ -34,7 +34,7 @@ class Routes {
 
   static final add_recipe = RouteDefinition(
     routePath: RoutePaths.add_recipe,
-    component: add_recipe_template.StepsComponentNgFactory,
+    component: add_recipe_template.AddRecipeComponentNgFactory,
   );
 
   static final all = <RouteDefinition>[
