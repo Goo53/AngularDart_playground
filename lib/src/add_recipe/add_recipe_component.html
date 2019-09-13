@@ -8,7 +8,7 @@
         </material-fab>
       </label>
       <input id="upload-photo" type="file"
-               accept="image/*">
+               accept="image/*" >
     <!-- Label paired with an input triggers it -->
 </div>
   <div class="card__primary">
@@ -61,15 +61,15 @@
 
   <div class="mdc-card__actions">
     <div class="mdc-card__action-buttons">
-      <material-button>Add Tags</material-button>
+      <material-dropdown-select
+      buttonText="{{selectedValue}}"
+      [(selection)]="selectedValue"
+      [options]="values">
+    </material-dropdown-select>
     </div>
     <div class="mdc-card__action-icons">
-      <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="Share">share</button>
-      <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="More options">more_vert</button>
-
+      <button class="mdc-button mdc-button--raised"
+        data-mdc-auto-init="MDCRipple">Done!</button>
     </div>
   </div>
 </div>
-
-<button class="mdc-button mdc-button--raised"
-  data-mdc-auto-init="MDCRipple">Auto Init!</button>
