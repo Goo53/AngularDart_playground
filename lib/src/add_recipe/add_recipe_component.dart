@@ -32,6 +32,7 @@ class AddRecipeComponent implements OnInit {
   String newItem = '';
   String newStep = '';
   String name;
+  String newName = '';
 
   AddRecipeComponent(this.recipeService);
 
@@ -40,7 +41,6 @@ class AddRecipeComponent implements OnInit {
     steps = await recipeService.getStep();
     items = await recipeService.getIngridiend();
   }
-
     void additem() {
       items.add(newItem);
       newItem = '';

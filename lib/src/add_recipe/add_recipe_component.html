@@ -12,7 +12,8 @@
     <!-- Label paired with an input triggers it -->
 </div>
   <div class="card__primary">
-    <h2 class="card__title">Name</h2>
+    <h2 class="card__title"> Name: {{newName}}</h2>
+    <material-input blurUpdate label="Add name" [(ngModel)]="newName" ></material-input>
     <h3 class="card__subtitle">URL</h3>
   </div>
   <div class="maincard">
