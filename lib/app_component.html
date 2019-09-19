@@ -1,15 +1,13 @@
+<div *ngIf="!isAuthenticated()">
+</div>
 
+<firebase-auth-ui [disableAutoSignIn]="true" [uiConfig]="getUIConfig()"></firebase-auth-ui>
+
+<br/>
+
+<div *ngIf="isAuthenticated()">
 <material-drawer class="drawer" temporary overlay #drawer="drawer">
   <div *deferredContent>
-      <material-list-item>
-        <material-button class="nav" raised icon [routerLink]="RoutePaths.login.toUrl()"
-           [routerLinkActive]="'active-route'" (trigger)="drawer.toggle()">Login</material-button>
-      </material-list-item>
-      <!--  'icon' makes material-button kinda roundish
-            (trigger)='drawer.toggle()' closes drawer
-      --><material-list-item><button class="mdc-button mdc-button--raised"
-        data-mdc-auto-init="MDCRipple" [routerLink]="RoutePaths.login.toUrl()"
-           [routerLinkActive]="'active-route'" (trigger)="drawer.toggle()">Login</button></material-list-item>
       <material-list-item>
         <material-button class="nav" raised dense [routerLink]="RoutePaths.home.toUrl()"
            [routerLinkActive]="'active-route'" (trigger)="drawer.toggle()">Home</material-button>
@@ -49,3 +47,6 @@
 </material-content>
 
 <router-outlet [routes]="Routes.all"></router-outlet>
+<button (click)="logout()">Logout</button>
+
+</div>

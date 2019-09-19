@@ -3,7 +3,6 @@ import 'route_paths.dart';
 
 import './recipes_list/recipes_list_component.template.dart' as recipes_list_template;
 import './add_recipe/add_recipe_component.template.dart' as add_recipe_template;
-import './login/login_component.template.dart' as login_template;
 import './home_screen/home_screen_component.template.dart' as home_screen_template;
 import './home/home_component.template.dart' as home_template;
 
@@ -21,15 +20,10 @@ class Routes {
     component: home_screen_template.HomeScreenComponentNgFactory,
   );
 
-  static final login = RouteDefinition(
-    routePath: RoutePaths.login,
-    component: login_template.LoginComponentNgFactory,
-    useAsDefault: true,
-  );
-
   static final recipes = RouteDefinition(
     routePath: RoutePaths.recipes,
     component: recipes_list_template.RecipesListComponentNgFactory,
+    useAsDefault: true,
   );
 
   static final add_recipe = RouteDefinition(
@@ -40,7 +34,6 @@ class Routes {
   static final all = <RouteDefinition>[
     home_screen,
     home,
-    login,
     recipes,
     add_recipe,
     RouteDefinition(
