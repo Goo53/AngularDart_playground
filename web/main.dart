@@ -20,6 +20,7 @@ void main() {
       databaseURL: databaseURL,
       storageBucket: storageBucket
   );
+  var database = fb.database();
   runApp(ng.AppComponentNgFactory, createInjector: injector);
   autoInit();
   querySelectorAll('.mdc-button').forEach(MDCRipple.attachTo);
