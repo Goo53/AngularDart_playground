@@ -25,7 +25,7 @@
            [routerLinkActive]="'active-route'" (trigger)="drawer.toggle()">Add Recipe</material-button>
       </material-list-item>
       <material-fab raised class="blue">
-  <material-icon icon="reply"></material-icon>
+        <material-button (click)="logout()">Logout</material-button>
 </material-fab>
   </div>
 </material-drawer>
@@ -47,6 +47,5 @@
 </material-content>
 
 <router-outlet [routes]="Routes.all"></router-outlet>
-<button (click)="logout()">Logout</button>
 
 </div>
