@@ -1,0 +1,51 @@
+<!-- <div class="container">
+  <div class="row">
+
+    <div
+      class="col-md-4 mb-3"
+      *ngFor="let recipe of recipes; let i = index">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ recipe.name }}</h5>
+          <div
+            *ngFor="let ingredient of recipe.ingredientslist; let i = index">
+          <p class="card-text" >{{ recipe.ingredientslist[i]}}</p> </div>
+          <div
+            *ngFor="let step of recipe.stepslist; let i = index">
+          <p class="card-text" >{{ recipe.stepslist[i] }}</p> </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="mdc-card" *ngFor="let recipe of recipes; let i = index">
+  <div class="mdc-card__media">
+<!-- Photo here-->
+</div>
+  <div class="card__primary">
+    <h2 class="card__title"> {{recipe.name}}</h2>
+    <h3 class="card__subtitle">{{recipe.imgUrl}}</h3>
+  </div>
+  <div class="maincard">
+
+  <div class="card_ingridients">
+    <div *ngFor="let ingredient of recipe.ingredientslist; let i = index">
+    <p class="card-text" >{{ recipe.ingredientslist[i]}}</p> </div>
+  </div>
+
+  <div class="card_steps">
+    <div *ngFor="let step of recipe.stepslist; let i = index">
+    <p class="card-text" >{{ recipe.stepslist[i] }}</p> </div>
+  </div>
+</div>
+
+  <div class="mdc-card__actions">
+    <div class="mdc-card__action-buttons">{{recipe.tag}}</div>
+    <div class="mdc-card__action-icons">
+      <button class="mdc-button mdc-button--raised"
+        data-mdc-auto-init="MDCRipple">Go to 'cook' mode</button>
+    </div>
+  </div>
+</div>
