@@ -5,7 +5,7 @@ import 'package:angular_components/angular_components.dart';
 import 'package:angular_components/material_select/material_dropdown_select.dart';
 
 
-import 'package:my_cookbook/src/add_recipe/recipe_service.dart';
+import 'package:my_cookbook/src/services/add_recipe_service.dart';
 import 'package:my_cookbook/src/recipe.dart';
 
 @Component(

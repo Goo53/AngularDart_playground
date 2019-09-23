@@ -3,14 +3,10 @@ import 'package:angular_router/angular_router.dart';
 
 import 'src/routes.dart';
 import 'package:angular_components/angular_components.dart';
-import 'package:angular/angular.dart';
 import 'package:firebase_dart_ui/firebase_dart_ui.dart';
 import 'package:firebase/firebase.dart' as fb;
 
-
 import 'package:firebase/src/interop/firebase_interop.dart';
-
-import "dart:html";
 
 import 'package:js/js.dart';
 
@@ -20,7 +16,7 @@ import 'dart:js';
   selector: 'my-app',
   styleUrls: ['package:angular_components/app_layout/layout.scss.css', 'app_component.css'],
   templateUrl: 'app_component.html',
-  providers: const <dynamic>[materialProviders],
+  providers:  <dynamic>[materialProviders],
   directives: [
     routerDirectives,
     DeferredContentDirective,
