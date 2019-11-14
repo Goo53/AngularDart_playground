@@ -12,3 +12,4 @@ doc/api/
 lib/src/services/database_service.dart
 web/firebase.js
 web/login.js
+web/test
