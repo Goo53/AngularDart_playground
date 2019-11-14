@@ -48,7 +48,7 @@ class AppComponent {
   // todo: We need to create a nicer wrapper for the sign in callbacks.
   PromiseJsImpl<void>  signInFailure(AuthUIError authUiError) {
     // nothing to do;
-    return new PromiseJsImpl<void>( () => print("SignIn Failure"));
+    return  PromiseJsImpl<void>( () => print("SignIn Failure"));
   }
 
   // Example SignInSuccess callback handler
@@ -64,20 +64,20 @@ class AppComponent {
   /// AuthUi widget. This is where you configure the providers and options.
   UIConfig getUIConfig() {
     if (_uiConfig == null) {
-      var googleOptions = new CustomSignInOptions(
+      var googleOptions =  CustomSignInOptions(
           provider: fb.GoogleAuthProvider.PROVIDER_ID,
           scopes: ['email', 'https://www.googleapis.com/auth/plus.login'],
           customParameters:
-              new GoogleCustomParameters(prompt: 'select_account'));
+               GoogleCustomParameters(prompt: 'select_account'));
 
-      var callbacks = new Callbacks(
+      var callbacks =  Callbacks(
           uiShown: () => print("UI shown callback"),
           signInSuccessWithAuthResult: allowInterop(signInSuccess),
           signInFailure: signInFailure
       );
 
 
-      _uiConfig = new UIConfig(
+      _uiConfig =  UIConfig(
           signInSuccessUrl: '/',
           signInOptions: [
             googleOptions,
